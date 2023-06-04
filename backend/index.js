@@ -202,8 +202,12 @@ app.post("/checkoutpayment"  ,  async (req,res)=>{
                 //    success_url:`${process.env.FRONTEND_URL}/success `,
                 //    cancel_url:`${process.env.FRONTEND_URL}/cancel`,
 
-                    success_url: 'http://localhost:3000/success',
-                    cancel_url: 'http://localhost:3000/cancel',
+                    // success_url: 'http://localhost:3000/success',
+                    // cancel_url: 'http://localhost:3000/cancel',
+
+                     success_url: 'https://clothshoppingwebsite.vercel.app/success',
+                    cancel_url: 'https://clothshoppingwebsite.vercel.app/cancel',
+
                  
                 }
                       
