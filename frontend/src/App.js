@@ -28,13 +28,13 @@ function App() {
                              dispatch(setDataProduct(resData));
                         }
                       )()
-            },[])
+              },[])
 
             const productData=useSelector((state)=>state.product);
             console.log(productData);
   return (
             <>    
-                        <Toaster/>
+                 <Toaster/>
                 
                   <div>
            <Header/>

@@ -88,17 +88,17 @@ const Product = () => {
 
           <select name="category" id="" className='bg-slate-200 p-1 my-1 '    onChange={handleOnChange}  value={data.category}  >
             <option value="other">select category </option>
-            <option value="fruits"> Fruits </option>
-            <option value="vegitable" > Vegitable </option>
-            <option value="icream"  > Icream </option>
-            <option value="dosa" >Dosa </option>
-            <option value="piza" > Piza </option>
-            <option value="piza" > Dry Fruits </option>
-            <option value="rice">Rice</option>
+            <option value="shirt"> Shirt </option>
+            <option value="T-shits" > T-Shirts </option>
+            <option value="Sarees"  > Sarees </option>
+            <option value="Jeans top" >Jeans top </option>
+            <option value="Jeans" > Jeans </option>
+             <option value="Trousers" > Trousers </option>
+           {/* <option value="rice">Rice</option>
             <option value="cake">Cacke</option>
             <option value="Burger">Burger</option>
             <option value="Panner">Panner</option>
-            <option value="fast food"> fast food </option>
+            <option value="fast food"> fast food </option> */}
 
           </select>
           

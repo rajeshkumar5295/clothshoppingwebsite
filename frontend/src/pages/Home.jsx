@@ -17,7 +17,7 @@ const Home = () => {
           const productData=useSelector((state)=>state.product.productList)
           console.log(productData);
           const homeProductCartList=productData.slice(7,11);
-          const homeProductCartListVegtables=productData.filter(el=>el.category==="vegitable",[])
+          const homeProductCartListVegtables=productData.filter(el=>el.category==="shirt",[])
           console.log(homeProductCartListVegtables)
 
        const loadingArray=new Array(4).fill(null);
@@ -113,7 +113,7 @@ const Home = () => {
              <div className='' >
                      <div  className='flex w-full items-center ' > 
 
-                       <h2 className='font-bold text-2xl text-slate-800 underline mb-4  '  >Fresh Vegitables </h2> 
+                       <h2 className='font-bold text-2xl text-slate-800 underline mb-4 '> Trending One  </h2> 
                         <div className='ml-auto flex gap-4  ' >  
                           
                            <button  onClick={preveProduct}   className='bg-slate-300 hover:bg-slate-400 text-lg  p-2 rounded' > <GrPrevious/>   </button> 

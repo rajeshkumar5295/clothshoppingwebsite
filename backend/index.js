@@ -38,7 +38,14 @@ mongoose.set('strictQuery', true);
 
 
 
- mongoose.connect("mongodb://127.0.0.1:27017/e-comme");
+//  mongoose.connect("mongodb://127.0.0.1:27017/e-comme");
+console.log(process.env.MONGODB_URL)
+// mongoose.connect(process.env.MONGODB_URL)
+
+mongoose.connect(process.env.MONGODB_URL).then(()=>{console.log("Connected to database")})
+.catch((err)=>console.log(err))
+
+
 
 
 const userSchema=new mongoose.Schema({
@@ -120,10 +127,7 @@ app.post("/signup",async(req,resp)=>{
         }else{
             resp.send({message:"Email is not available,please sign up",alert:false});
         }
-
-
-
-    })
+  })
 
 })
 
@@ -162,10 +166,10 @@ app.get("/product",async(req,resp)=>{
 //    Payment Gatway
 //   console.log("Hi ")
 
- console.log(process.env.FRONTEND_URL)
-console.log(process.env.STRIPE_SECRET_KEY)
-console.log("hi Kallu")
-const stripe =new Stripe(process.env.STRIPE_SECRET_KEY)
+   console.log(process.env.FRONTEND_URL)
+  console.log(process.env.STRIPE_SECRET_KEY)
+  console.log("hi Kallu")
+  const stripe =new Stripe(process.env.STRIPE_SECRET_KEY)
 
 app.post("/checkoutpayment"  ,  async (req,res)=>{
         //   console.log(req.body);
@@ -215,8 +219,7 @@ app.post("/checkoutpayment"  ,  async (req,res)=>{
              }
           catch(err){
             res.status(err.statusCode||500).json(err.message) 
-
-          }
+       }
 
       console.log("hi pushpa paushlkkkdfsalkjdfslkjfsdlkajdafs");
 
